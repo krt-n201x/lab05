@@ -58,7 +58,6 @@ export default {
       .catch(() => {
         next({ name: 'NetworkError' })
       })
-      
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
     EventService.getEvents(2, parseInt(routeTo.query.page) || 1)
@@ -70,7 +69,6 @@ export default {
       .catch(() => {
         next({ name: 'NetworkError' })
       })
-      
   },
   computed: {
     hasNextPage() {
